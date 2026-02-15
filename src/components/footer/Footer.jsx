@@ -1,5 +1,5 @@
 import { Heart } from "lucide-react";
-import "./footer.css";
+import "./Footer.css";
 
 export default function Footer() {
   return (
