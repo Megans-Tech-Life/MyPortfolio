@@ -1,0 +1,38 @@
+.footer {
+  padding: 2rem 1.5rem;
+  border-top: 1px solid #e5e7eb;
+  margin-top: 4rem;
+}
+
+.footer__container {
+  max-width: 72rem;
+  margin: 0 auto;
+}
+
+.footer__content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.footer__built {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.footer_heart {
+  width: 16px;
+  height: 16px;
+  margin: 0 6px;
+}
+
+@media (min-width: 768px) {
+  .footer__content {
+    flex-direction: row;
+    text-align: left;
+  }
+}

@@ -1,0 +1,142 @@
+/* Full-width purple band */
+.certBand {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+
+  padding: 64px 18px;
+  background: linear-gradient(135deg, #7c3aed, #2563eb);
+  position: relative;
+  overflow: hidden;
+}
+
+.certBand__inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.certBand__head {
+  text-align: center;
+  margin-bottom: 26px;
+}
+
+.certBand__title {
+  margin: 0 0 10px 0;
+  font-size: clamp(28px, 3.2vw, 40px);
+  letter-spacing: -0.02em;
+  color: #ffffff;
+}
+
+.certBand__subtitle {
+  margin: 0 auto;
+  max-width: 68ch;
+  color: rgba(255, 255, 255, 0.86);
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* Polaroid grid */
+.polaroidGrid {
+  display: grid;
+  gap: 18px;
+  justify-content: center;
+}
+
+@media (min-width: 760px) {
+  .polaroidGrid {
+    grid-template-columns: repeat(2, 320px);
+    gap: 22px;
+  }
+}
+
+/* Polaroid card */
+.polaroidCard {
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  border-radius: 16px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.22);
+  overflow: hidden;
+
+  transform-origin: center;
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.polaroidCard--left {
+  transform: rotate(-2deg);
+}
+
+.polaroidCard--right {
+  transform: rotate(2deg);
+}
+
+.polaroidCard:hover {
+  transform: translateY(-4px) rotate(0deg);
+  box-shadow: 0 26px 58px rgba(0, 0, 0, 0.26);
+}
+
+/* Photo area */
+.polaroidCard__photo {
+  padding: 14px 14px 0 14px;
+}
+
+.polaroidCard__img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  background: rgba(124, 58, 237, 0.08);
+}
+
+/* Caption area: the “polaroid writing” */
+.polaroidCard__caption {
+  padding: 12px 16px 16px 16px;
+}
+
+.polaroidCard__handTitle {
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  color: #111827;
+
+  /* handwritten-ish feel without loading fonts */
+  transform: rotate(-0.4deg);
+}
+
+.polaroidCard__meta {
+  margin-top: 6px;
+  color: #6b7280;
+  font-size: 13px;
+  font-weight: 650;
+}
+
+/* Optional link */
+.polaroidCard__link {
+  display: inline-flex;
+  margin-top: 10px;
+  text-decoration: none;
+  font-weight: 850;
+  color: #6d28d9;
+  padding: 8px 10px;
+  border-radius: 12px;
+  background: rgba(124, 58, 237, 0.1);
+  border: 1px solid rgba(124, 58, 237, 0.18);
+  transition:
+    transform 150ms ease,
+    background 150ms ease;
+}
+
+.polaroidCard__link:hover {
+  transform: translateY(-1px);
+  background: rgba(124, 58, 237, 0.14);
+}
+
+/* Mobile: reduce rotation */
+@media (max-width: 520px) {
+  .polaroidCard--left,
+  .polaroidCard--right {
+    transform: rotate(0deg);
+  }
+}
